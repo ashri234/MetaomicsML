@@ -1,3 +1,7 @@
 Quality checks using tools like FastQC and summarize quality metrics (e.g., sequence counts, per-base quality, read duplication levels)
 # command to run fastqc
 fastqc <filename.fastq> -o <output_directory>
+
+
+
+The basic statistics of a sequencing file include several important measures. The filename refers to the original name of the file that was analyzed. The file type indicates whether the file contained actual base calls or colorspace data that required conversion into base calls. The encoding specifies which ASCII encoding scheme was used for the quality values within the file. The total sequences measure provides a count of the number of sequences processed; while both actual and estimated values are reported, they are currently always the same because analyzing only a subset of sequences is disabled, as problematic sequences are not evenly distributed throughout a file. The filtered sequences field, applicable in Casava mode, reports the number of sequences flagged and removed from analysis; these are excluded from the total sequence count, which only reflects sequences used for further processing. The sequence length shows the length of the shortest and longest reads in the dataset, with a single value reported if all reads are uniform in length. Finally, %GC represents the overall guanine–cytosine content across all sequences, an important feature for evaluating the composition and quality of sequencing data.
